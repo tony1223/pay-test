@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  p 交易中，請稍後.....
+
+  form(id="test",action=data["action"],method="post")
+    each i,v in data
+      input(type="hidden",name=v,value=i)
+
+  script.
+    document.getElementById("test").submit();
